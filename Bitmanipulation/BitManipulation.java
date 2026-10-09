@@ -1,3 +1,4 @@
+package Bitmanipulation;
 class BitManipulation {
     public static long getBit(long n, int k) {
         return ((n>>k)&1L);
@@ -23,5 +24,13 @@ class BitManipulation {
             return true;
         }
         return false;
+    }
+    public static long countSetBits(long n) {
+        long c=0;
+        while(n>0){
+            n=(n&(n-1));
+            c++;
+        }
+        return c;
     }
 }
